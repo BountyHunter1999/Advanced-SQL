@@ -1,0 +1,9 @@
+DROP TYPE IF EXISTS tt;
+CREATE TYPE tt AS (a int, b text, c bool, d int);
+
+CREATE TABLE T1 OF tt;
+ALTER TABLE T1 ADD PRIMARY KEY (a);
+
+INSERT INTO T1 TABLE T;
+
+TABLE T1;
