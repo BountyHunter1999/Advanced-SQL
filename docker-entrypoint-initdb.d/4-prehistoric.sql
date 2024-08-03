@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS prehistoric (
     class VARCHAR(255),
-    herbivore BOOLEAN,
+    "herbivore?" BOOLEAN,
     legs INT,
     species VARCHAR(255)
 );
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS prehistoric (
 DO $$
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM prehistoric) THEN
-        INSERT INTO prehistoric (class, herbivore, legs, species) VALUES
+        INSERT INTO prehistoric (class, "herbivore?", legs, species) VALUES
         ('mammalia', TRUE, 2, 'Megatherium'),
         ('mammalia', TRUE, 4, 'Paraceratherium'),
         ('mammalia', TRUE, 2, NULL),
